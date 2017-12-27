@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="../p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="radar.js"></script>
+    <link rel="stylesheet" type="text/css" href="scss/style.css">
+  </head>
+  <body>
+      <h1> Pomodoro Clock </h1>
+
+      <div class="clockDisplay">
+          <div class="Timer">
+              <div class="digitDisplay">
+                  <button class="upButton" onclick="upFunc(600)" type="button"></button>
+                  <input id="mins" type="number" readonly>
+                  <button class="downButton" onclick="downFunc(600)" type="button"></button>
+              </div>
+              <div class="digitDisplay">
+                  <button class="upButton" onclick="upFunc(60)" type="button"></button>
+                  <input id="min" type="number" readonly>
+                  <button class="downButton" onclick="downFunc(60)" type="button"></button>
+              </div>
+              <div id="semiDiv">
+                  <input id='semicolon' placeholder=":" readonly>
+                 <button id="downColon" type="button"></button>
+
+              </div>
+              <div class="digitDisplay">
+                  <button class="upButton" onclick="upFunc(10)" type="button"></button>
+                  <input id="secs" type="number" readonly>
+                  <button class="downButton" onclick="downFunc(10)" type="button"></button>
+              </div>
+              <div class="digitDisplay">
+                  <button class="upButton" onclick="upFunc(5)" type="button"></button>
+                  <input id="sec" type="number" readonly>
+                  <button class="downButton" onclick="downFunc(5)" type="button"></button>
+              </div>
+          </div>
+          <div class="buttonDisplay">
+              <input class="disButton" type="button" onclick="startButton()" id="start" value="Start"></button>
+              <input class="disButton" type="button" onclick="resetButton()" id="timerType" value="Reset"></button>
+          </div>
+      </div>
+  </body>
+</html>
